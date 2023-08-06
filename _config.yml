@@ -1,0 +1,113 @@
+# Hexo Configuration   # 注释: Hexo配置文件
+## Docs: https://hexo.io/docs/configuration.html   # 注释: Hexo配置文档
+## Source: https://github.com/hexojs/hexo/    # 注释: Hexo源码地址
+
+# Site    # 注释: 博客基本信息
+title: Spicy-pig    # 注释: 博客标题
+subtitle: 信我所行    # 注释: 博客副标题
+description: 在小小的花园里面挖呀挖呀挖...    # 注释: 博客签名
+keywords:   # 注释: 关键词
+author: 苦逼小码农    # 注释: 博客作者
+language: zh-CN     # 注释: 博客语言
+timezone:  Asia/Shanghai   # 注释: 博客所在时区
+ 
+# URL    # 注释: 博客地址相关配置
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://spicypig.top   # 注释: 博客URL
+permalink: :year/:month/:day/:title/  # 注释: 博客永久链接
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks   # 注释: 美化URL链接
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks    # 注释: 美化URL链接
+
+# Directory   # 注释: 目录配置
+source_dir: source   # 注释: 源文件目录
+public_dir: public   # 注释: 静态文件目录
+tag_dir: tags      # 注释: 标签目录
+archive_dir: archives   # 注释: 归档目录
+category_dir: categories  # 注释: 分类目录
+code_dir: downloads/code   # 注释: 代码目录
+i18n_dir: :lang    # 注释: 多语言目录
+skip_render:
+
+# Writing   # 注释: 撰写配置
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab   # 注释: 打开外部链接方式
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: true # hexo new "text" 时创建.md的同时创建一个文件夹   # 注释: 自动创建文章文件夹
+relative_link: false
+future: true
+
+# 代码高亮  # 注释: 代码高亮配置
+highlight:
+  enable: false
+  line_number: false
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting  # 注释: 首页设置
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 16
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true    # 注释: 是否生成meta信息
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD    # 注释: 时间格式
+time_format: HH:mm:ss    # 注释: 时间格式
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination   # 注释: 分页配置
+## Set per_page to 0 to disable pagination
+per_page: 16
+pagination_dir: page
+
+# Include / Exclude file(s)   # 注释: 文件包含/排除配置
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions  # 注释: 扩展插件
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: matery   # 注释: 博客主题
+
+# Deployment  # 注释: 部署配置
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  repo: git@github.com:pigcct/pigcct.github.io.git
+  branch: master
+
+encrypt:
+  enable: true
